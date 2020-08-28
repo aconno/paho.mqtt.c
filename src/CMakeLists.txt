@@ -258,9 +258,9 @@ IF (PAHO_WITH_SSL)
             SOVERSION ${PAHO_VERSION_MAJOR}
             COMPILE_DEFINITIONS "OPENSSL=1;PAHO_MQTT_STATIC=1")
         IF (NOT WIN32)
-            SET_TARGET_PROPERTIES(paho-mqtt3cs-static PROPERTIES OUTPUT_NAME paho-mqtt3cs)
-            SET_TARGET_PROPERTIES(paho-mqtt3as-static PROPERTIES OUTPUT_NAME paho-mqtt3as)
-        ENDIF()
+            # SET_TARGET_PROPERTIES(paho-mqtt3cs-static PROPERTIES OUTPUT_NAME paho-mqtt3cs)
+            # SET_TARGET_PROPERTIES(paho-mqtt3as-static PROPERTIES OUTPUT_NAME paho-mqtt3as)
+        ENDIF ()
 
 	    IF(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
 			SET(MQTTCLIENT_ENTRY_POINT _MQTTClient_init)
